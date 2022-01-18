@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "a085d47f-4641-4064-a84c-787820d43825",
+		"name": "AWS_NODEJS contacts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n         \"contact_id\" : \"3774\",\r\n         \"name\": \"test\",\r\n            \"dob\": \"21-09-1992\",\r\n            \"phones\": [\"1234567890\"],\r\n            \"emails\": [\"test3@gmail.com\"],\r\n            \"primary_phone\": \"1234567890\",\r\n            \"primary_email\": \"test3@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fgto6r7p30.execute-api.us-east-2.amazonaws.com/dev/contact",
+					"protocol": "https",
+					"host": [
+						"fgto6r7p30",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fgto6r7p30.execute-api.us-east-2.amazonaws.com/dev/contacts",
+					"protocol": "https",
+					"host": [
+						"fgto6r7p30",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
